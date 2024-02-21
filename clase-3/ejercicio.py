@@ -1,51 +1,32 @@
-
-def suma():
+def accion_a():
     num1 = float(input("Ingrese el primer número: "))
     num2 = float(input("Ingrese el segundo número: "))
     resultado = num1 + num2
-    print(f"La suma de los números {num1} y {num2} es:", resultado)
+    print("La suma de los números es:", resultado)
 
-def resta():
-    num1 = float(input("Ingrese el primer número: "))
-    num2 = float(input("Ingrese el segundo número: "))
-    resultado = num1 - num2
-    print(f"La diferencia entre de los números {num1} y {num2} es:", resultado)
-
-def multiplicacion():
+def accion_b():
     num1 = float(input("Ingrese el primer número: "))
     num2 = float(input("Ingrese el segundo número: "))
     resultado = num1 * num2
-    print(f"El producto de los números {num1} y {num2} es:", resultado)
-
-def division():
-    num1 = float(input("Ingrese el primer número: "))
-    num2 = float(input("Ingrese el segundo número: "))
-    resultado = num1 / num2
-    print(f"La división de {num1} y {num2} es:", resultado)
+    print("El producto de los números es:", resultado)
 
 def main():
     while True:
         print("Opciones:")
-        print("1. Sumar.")
-        print("2. Restar ")
-        print("3. Multiplicación ")
-        print("4. División ")
-        print("5. Salir del programa.")
+        print("1. Sumar dos números.")
+        print("2. Multiplicar dos números.")
+        print("3. Salir del programa.")
         opcion = input("Ingrese el número de la opción que desea realizar: ")
 
         if opcion == "1":
-            suma()
+            accion_a()
         elif opcion == "2":
-            resta()
+            accion_b()
         elif opcion == "3":
-            multiplicacion()
-        elif opcion == "4":
-            division()
-        elif opcion == "5":
-            print("¡Fin del Programa!")
+            print("¡Hasta luego!")
             break
         else:
-            print("Opción no válida. Por favor, ingrese 1, 2 , 3 ,4  ó 5")
+            print("Opción no válida. Por favor, ingrese 1, 2 o 3.")
 
 if __name__ == "__main__":
     main()
