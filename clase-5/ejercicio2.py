@@ -44,7 +44,7 @@ class Aguila(Animal):
     
 perro1 = Perro("Coli", "Caniche", 4, TipoAnimal.VERTEBRADO)
 nombre_clase = perro1.__class__.__name__
-print (f"Hola!! mi nombre es {perro1.nombre}, soy un {nombre_clase},  {(TipoAnimal.VERTEBRADO.value).lower()}, tengo {perro1.cantidad_patas} patas y {(perro1.comer()).lower()} !!" )
+print (f"Hola!! mi nombre es {perro1.nombre}, soy un {nombre_clase}, de raza {perro1.raza}, soy {(TipoAnimal.VERTEBRADO.value).lower()}, tengo {perro1.cantidad_patas} patas y {(perro1.comer()).lower()} !!" )
 
 aguila1 = Aguila( 2, TipoAnimal.VERTEBRADO)
 nombre_clase = aguila1.__class__.__name__
