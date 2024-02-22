@@ -40,7 +40,7 @@ class TipoAnimal(Enum):
     INVERTEBRADO = "invertebrado"
     
 perro1 = Perro("Coli", "Caniche", 4, TipoAnimal.VERTEBRADO)
-print (f"Hola!! mi nombre es {perro1.nombre}, soy {(TipoAnimal.VERTEBRADO.name).lower()}, tengo {perro1.cantidad_patas} patas y {(perro1.comer()).lower()} !!" )
+print (f"Hola!! mi nombre es {perro1.nombre}, soy {(TipoAnimal.VERTEBRADO.value).lower()}, tengo {perro1.cantidad_patas} patas y {(perro1.comer()).lower()} !!" )
 
 aguila1 = Aguila( 2, TipoAnimal.VERTEBRADO)
-print (f"Hola!! soy una Aguila, soy  {(TipoAnimal.VERTEBRADO.name).lower()}, tengo {aguila1.cantidad_patas} patas y {(aguila1.volar()).lower()} !!" )
+print (f"Hola!! soy una Aguila, soy  {(TipoAnimal.VERTEBRADO.value).lower()}, tengo {aguila1.cantidad_patas} patas y {(aguila1.volar()).lower()} !!" )
