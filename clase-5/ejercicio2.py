@@ -10,6 +10,7 @@
 ○ método correr(): retorna un string “estoy corriendo”
 ↪ La clase Aguila hereda de Animal y agrega:
 ○ método volar(): retorna un string “estoy volando”"""
+import inspect
 
 from enum import Enum
 
@@ -42,7 +43,9 @@ class Aguila(Animal):
 
     
 perro1 = Perro("Coli", "Caniche", 4, TipoAnimal.VERTEBRADO)
-print (f"Hola!! mi nombre es {perro1.nombre}, soy {(TipoAnimal.VERTEBRADO.value).lower()}, tengo {perro1.cantidad_patas} patas y {(perro1.comer()).lower()} !!" )
+nombre_clase = perro1.__class__.__name__
+print (f"Hola!! mi nombre es {perro1.nombre}, soy un {nombre_clase},  {(TipoAnimal.VERTEBRADO.value).lower()}, tengo {perro1.cantidad_patas} patas y {(perro1.comer()).lower()} !!" )
 
 aguila1 = Aguila( 2, TipoAnimal.VERTEBRADO)
-print (f"Hola!! soy una Aguila, soy  {(TipoAnimal.VERTEBRADO.value).lower()}, tengo {aguila1.cantidad_patas} patas y {(aguila1.volar()).lower()} !!" )
+nombre_clase = aguila1.__class__.__name__
+print (f"Hola!! soy un {nombre_clase}, soy  {(TipoAnimal.VERTEBRADO.value).lower()}, tengo {aguila1.cantidad_patas} patas y {(aguila1.volar()).lower()} !!" )
