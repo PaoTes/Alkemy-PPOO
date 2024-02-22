@@ -11,6 +11,12 @@
 ↪ La clase Aguila hereda de Animal y agrega:
 ○ método volar(): retorna un string “estoy volando”"""
 
+from enum import Enum
+
+class TipoAnimal(Enum):
+    VERTEBRADO = "vertebrado"
+    INVERTEBRADO = "invertebrado"
+
 class Animal:
     def __init__(self, cantidad_patas, tipo):
         self.cantidad_patas = cantidad_patas
@@ -33,11 +39,7 @@ class Aguila(Animal):
     def volar(self):
         return "Estoy volando"
     
-from enum import Enum
 
-class TipoAnimal(Enum):
-    VERTEBRADO = "vertebrado"
-    INVERTEBRADO = "invertebrado"
     
 perro1 = Perro("Coli", "Caniche", 4, TipoAnimal.VERTEBRADO)
 print (f"Hola!! mi nombre es {perro1.nombre}, soy {(TipoAnimal.VERTEBRADO.value).lower()}, tengo {perro1.cantidad_patas} patas y {(perro1.comer()).lower()} !!" )
